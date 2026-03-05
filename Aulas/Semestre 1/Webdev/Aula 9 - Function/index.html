@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9 - Function</title>
+</head>
+<body>
+
+    <script>
+        // nomeie variáveis e funções com letras e depois com números e anderline, Maíscula e minúsculas são diferentes
+
+
+        function caixa1() {
+            console.log('+-----+');
+            console.log('+  oi +');
+            console.log('+-----+');
+        }
+        
+        caixa1()
+
+        function caixa(text, char) {
+            let linha = '+' + char
+            for(let i = 0; i < text.length; i++) {
+                linha = linha + char
+            }
+            linha = linha + char + '+';
+            console.log(linha);
+            console.log('+ '+text+' +');
+            console.log(linha);
+        }
+        
+        let nome = 'Ana';
+        caixa(nome, '*')
+        caixa('oi gente', '#')
+
+        function fruta(nomeDaFruta) {
+            if(nomeDaFruta == 'morango') {
+                return 'morango'
+            }
+        }
+
+        // let emoji = fruta('morango')
+        //console.log(emoji)
+        console.log(fruta('morango'))
+
+    </script>
+    
+</body>
+</html>

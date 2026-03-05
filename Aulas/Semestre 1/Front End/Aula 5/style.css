@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+* {
+    font-family: "Jockey One", Roboto, Calibri, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+#banner {
+    background-color: #F43443;
+    display: flex;
+    justify-content: center; /* Alinha horizontal */
+    align-items: center; /* Alinha vertical */
+}
+
+#inicio {
+    background-color: #E8E8E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao {
+    background-color: #62c82e;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-size: 30px;
+    text-decoration: none;
+    width: 270px;
+    text-align: center;
+    margin: 20px; 
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        background-color: #3b8318;
+        transform: scale(1.2);
+    }
+}
+
+.botao:hover {
+    background-color: #285f0d;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.personagens-item {
+    width: 170px;
+    text-align: center;
+
+    &:hover img {
+        transform: translateY(-15px);
+    }
+
+    img {
+        transition: all .5s ease-in-out;
+    }
+}
+
+.personagens-item img {
+    border-radius: 100%;
+}
+
+h4 {
+    color: #fff;
+    background-color: rgba(64, 97, 201, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.personagens-lista {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+.poderes-lista {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.poderes-lista img {
+    border: 10px dashed #E7B300;
+    width: 120px;
+    height: 120px;
+    margin: 0 20px 30px;
+    border-radius: 10px;
+}
+
+.viloes-lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.viloes-lista img {
+    border-radius: 100%;
+}
+
+.final-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.princesas {
+    width: 170px;
+    height: 180px;
+    object-fit: contain;
+
+}
+
+nav {
+    background-color: #62c82e;
+    width: 100%;
+    box-shadow: 1px 1px 10px #00000070;
+    position: fixed;
+    top: 0;
+    
+    ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            padding: 5px 0;
+            list-style: none;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 22px;
+                display: block;
+                padding: 10px 25px;
+            }
+        }
+    }
+}
+
+
+#personagens {background-color: #819DF9; }
+#poderes { background-color: #E7D5AB; }
+#viloes { background-color: #555250; }
+#final { background-color: #819DF9; }
+
+

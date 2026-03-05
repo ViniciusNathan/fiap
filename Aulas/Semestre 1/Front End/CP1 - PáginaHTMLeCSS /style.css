@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #EFE9F4;
+    font-family: Poppins, Arial;
+}
+
+#content {
+    margin: 0 70px;
+}
+
+#banner {
+    object-fit: cover;
+    width: 100%;
+}
+
+nav {
+    background-color: #064661;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav h3 {
+    margin: 0;
+    font-family: Limelight;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: Limelight;
+    text-transform: uppercase;
+    color: #064661;
+    margin-top: 120px;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#segundoParagrafo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#textoSegundoParagrafo br {
+    margin-bottom: 20px;
+}
+
+#textoSegundoParagrafo {
+    width: 545px;
+}
+
+#topics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.cardA {
+    background-color: #99BEDF;
+    border: solid 2px #064661;
+    padding: 32px;
+    border-radius: 8px;
+    min-width: 250px;
+
+    h3 {
+        font-family: Limelight;
+        font-size: 26px;
+    }
+}
+
+.cardB {
+    background-color: rgba(6, 70, 97, 0.7);
+    border: solid 2px #064661;
+    padding: 32px;
+    border-radius: 8px;
+    min-width: 250px;
+
+    h3 {
+        font-family: Limelight;
+        font-size: 26px;
+    }
+}
+
+.h2Centro {
+    text-align: center;
+}
+
+address {
+    padding: 40px 0;
+    font-style: normal;
+}
+
+address i, 
+address img.whatsapp, 
+address a, 
+address span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.mail, .tel {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    color: white;
+    background-color: #064661;
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+i {
+    font-size: 24px;
+}
+
+.whatsapp {
+    width: 24px;
+}

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row; -> É o que vem padrão*/
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: nowrap; -> quebra linhas de acordo com tamanho da janela */
+    /* justify-content: flex-start; -> padrão*/
+    /* justify-content: flex-end; -> inicia a direita */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+
+}

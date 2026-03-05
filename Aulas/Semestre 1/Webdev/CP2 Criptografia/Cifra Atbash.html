@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atbash</title>
+</head>
+<body>
+
+    <script>
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        function cifrarAtbash(mensagem) {
+            let criptoMessage = '';
+            // Percorrendo a mensagem
+            for (i = 0; i < mensagem.length; i++) {
+                let letter = mensagem[i] // Guardar letras da mensagem
+                let isUpperCase = letter === letter.toUpperCase(); // Checar se a letra da mensagem é maiúscula ou minúscula
+                let letterUpper = letter.toUpperCase(); // Converte para maiúscula as que não são, para aplicar o resto do código
+                let position = alphabet.indexOf(letterUpper); // Encontrar posição no array
+
+                if(position != -1) {
+                    // Fórmula Atbash E(x) = (m - 1) - x -> m = 26 letras -> x = posição no array
+                    let positionCripto = (alphabet.length - 1) - position // posição oposta
+                    let letterCripto = alphabet[positionCripto] //encontra letra da posição oposta
+                    
+                    criptoMessage += isUpperCase ? letterCripto : letterCripto.toLowerCase(); // voltar com letra original (minúscula)
+                } else {
+                    criptoMessage += mensagem[i];
+                }
+
+            }
+
+            return criptoMessage;
+            
+        }
+
+        console.log(cifrarAtbash("OlaMundo")); 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Future Learn</title>
+</head>
+<body>
+    <h1>Future Learn</h1>
+    <h2>Formulário de inscrição</h2>
+    <p>Preencha os dados abaixo para participar da melhor plataforma de aprendizado das profissões do futuro</p>
+    <form>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" onblur="exibirFeedback()"/>
+        <span id="userNameError" class="error-message"></span>
+
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" maxlength="14" placeholder="Apenas números" onkeypress="formatarCPF('###.###.###-##', this)" onblur="checarCPF()"/>
+        <span id="userCpfError" class="error-message"></span>
+
+        <label for="email">Seu melhor email</label>
+        <input type="email" id="email" name="email" placeholder="@email" onblur="checarEmail()"/>
+        <span id="userEmailError" class="error-message"></span>
+
+        <label for="skills">Selecione suas habilidades</label>
+        <input list="skills" id="skillsInput" placeholder="Selecione"/>
+            <datalist id="skills">
+                <option>Inglês</option>
+                <option>Comunicação</option>
+                <option>HTML & CSS</option>
+                <option>Javascript</option>
+            </datalist>
+        <button type="button" onclick="addHabilidades()">Adicionar habilidade</button>
+        <span id="userSkills" class="skills-message"></span>
+
+        <fieldset>
+            <legend>Selecione o interesse</legend>
+            <ul class="radio-list">
+                <li>
+                    <label for="interest-ia">
+                        <input type="radio" id="interest-ia" name="interest" value="ia" required>
+                        IA
+                    </label>
+                </li>
+                <li>
+                    <label for="interest-management">
+                        <input type="radio" id="interest-management" name="interest" value="management">
+                        Gestão de projetos
+                    </label>
+                </li>
+                <li>
+                    <label for="interest-programming">
+                        <input type="radio" id="interest-programming" name="interest" value="programming">
+                        Linguagem de programação
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <button id="buttonSend" onclick="validarFormulario()">Enviar</button>
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

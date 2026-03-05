@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Palitinhos</title>
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jogo dos Palitinhos</h1>
+    Seu Nome:
+    <input type="text" id="cxaNome" />
+    <button onclick="alterarNome()">Alterar Nome</button>
+
+    <table>
+        <tr>
+            <td class="box">
+                <h2 id="nomeJogador">EU</h2>
+                <h3>
+                    Palitos: <span id="qtdeEu">3</span>
+                </h3>
+                <button onclick="clicouBotaoJogar()">Jogar</button>
+            </td>
+            <td class="box">
+                <h2>Computador</h2>
+                <h3>
+                    Palitos: <span id="qtdeComp">3</span>
+                </h3>
+                <button>Jogar</button>
+            </td>
+        </tr>
+    </table>
+    <h2 id="cxaMsg">Mensagem:</h2>
+    <script>
+
+        let nome = document.getElementById("cxaNome")
+        let qtdeComp = 3
+        let qtdeJog = 3
+        let elemQtdeEu = document.getElementById("qtdeEu")
+        let elemQtdeComp = document.getElementById("qtdeComp")
+        let elemCxaMsg = document.getElementById("cxaMsg")
+
+        function clicouBotaoJogar() {
+            console.log("Estou aqui....")
+            let qtdeSeparaJog = parseInt(prompt("Digite a quantidade que você quer separar"))
+            let qtdePalpiteJog = prompt("Digite seu palpite")
+            // qtdeSeparaJog = parseInt(qtdeSeparaJog)
+            qtdePalpiteJog = parseInt(qtdePalpiteJog)
+
+            let qtdeSeparaComp = parseInt(Math.random() * 10) % (qtdeComp)
+            // qtdeSeparaComp = qtdeSeparaComp * 10
+            // qtdeSeparaComp = parseInt(qtdeSeparaComp)
+            // qtdeSeparaComp = qtdeSeparaComp % 4
+            console.log(qtdeSeparaComp)
+            let qtdePalpiteComp = qtdeSeparaComp + parseInt(Math.random() * 10) % (qtdeJog)
+
+            let total = qtdeSeparaComp + qtdeSeparaJog
+            if(qtdePalpiteJog == total) {
+                console.log("Ganhou!");
+                elemCxaMsg.innerText = nome.innerText + "Ganhou"
+                qtdeJog--
+                elemQtdeEu.innerText = qtdeJog  
+            } else {
+                if (qtdePalpiteComp == total) {
+                    console.log("Computador Ganhou");
+                    elemCxaMsg.innerText = "Computador Ganhou"
+                    qtdeComp--
+                    elemQtdeComp.innerText = qtdeComp
+                } else {
+                    console.log("Ninguém Ganhou");
+                    elemCxaMsg.innerText = "Ninguém Ganhou"
+                }
+            }
+            console.log("qtdeSeparaJog", qtdeSeparaJog);
+            console.log("qtdePalpiteJog", qtdePalpiteJog);
+            console.log("qtdeSeparaComp", qtdeSeparaComp);
+            console.log("qtdePalpiteComp", qtdePalpiteComp);
+        }
+
+        function alterarNome() {
+            let elemInput = document.getElementById("cxaNome")
+            let elemH2 = document.getElementById("nomeJogador")
+            nome = elemInput.value
+            elemH2.innerText = nome 
+        }
+
+    </script>
+</body>
+
+</html>

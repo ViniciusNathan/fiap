@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère</title>
+</head>
+<body>
+    <script>
+
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        const plaintext = "Enigma";
+        const chaveV = "CHAVE";
+
+        //Codificar
+
+        function cifrarVigenere(mensagem, palavraChave, modo = 'codificar') { // Use 'modo' para diferenciar codificação (+) de decodificação (-).
+            let criptoMessage = '';
+            let upperMessage = mensagem.toUpperCase();
+            let key = palavraChave.toUpperCase();
+            let keyIndex = 0;
+
+            for(i = 0; i < mensagem.length; i++) {
+                let letter = upperMessage[i] // Guardar letras da mensagem
+
+                if (alphabet.includes(letter)) { // Verifica se a letra da mensagem tem no alfabeto
+                    const letterIndex = alphabet.indexOf(letter); //Guarda a posição da letra da mensagem referente ao alfabeto
+                    const keyCharIndex = alphabet.indexOf(key[keyIndex % key.length]); //nova posição da letra criptografada
+
+                    // Alternar entre codificar (+) e decodificar (-)
+                    const shift = modo === 'codificar' ? keyCharIndex : -keyCharIndex;
+                    let newIndex = (letterIndex + shift + alphabet.length) % alphabet.length;
+
+                    criptoMessage += alphabet[newIndex];
+                    keyIndex++; //Avança no loop
+                    } else {
+                    criptoMessage += letter; //Se não for letra, mantem o caractere
+                    }
+                }
+
+        return criptoMessage;
+
+        }
+
+        const mensagemCifrada = cifrarVigenere(plaintext, chaveV, 'codificar');
+        console.log('Cifrada:', mensagemCifrada);
+        console.log('Decifrada:', cifrarVigenere(mensagemCifrada, chaveV, 'decodificar'));
+
+    </script>
+</body>
+</html>

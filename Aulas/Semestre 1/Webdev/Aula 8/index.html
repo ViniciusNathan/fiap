@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <script>
+
+        let v = [] //Vetor ou Array
+        v[0] = 10
+        v[3] = 8
+        console.log(v);
+
+        let nome = ['Ana', 'Bia', 'João', 'Maria', 'Paulo', 'Gustavo', 'Flavio', 'Bruno']
+        let sobrenome = ['Silva', 'Alves', 'Borges', 'Figueiredo']
+
+        for(let i = 0; i < 4; i++) {
+            console.log('Bom dia ', nome[i])
+        }
+
+        for(let i = 0; i < nome.length; i++) {
+            console.log('Bom dia ', nome[i])
+        }
+        
+        let aleatorio = Math.floor(Math.random()*10) //Sorteia números de 0 a 9
+        console.log(aleatorio)
+        
+        let positionName = Math.floor(Math.random() * nome.length) % nome.length //Pego o resto do número de váriaveis no array
+        console.log('bom dia', positionName)
+        console.log('Bom dia', nome[positionName])
+
+        let positionSobrenome = Math.floor(Math.random() * sobrenome.length) // Jeito mais simples
+        console.log('bom dia', nome[positionName], sobrenome[positionSobrenome])
+        
+        function geraNome() {
+            let nome = ['Ana', 'Bia', 'João', 'Maria', 'Paulo', 'Gustavo', 'Flavio', 'Bruno']
+            let sobrenome = ['Silva', 'Alves', 'Borges', 'Figueiredo']
+
+            let positionName = Math.floor(Math.random() * nome.length)
+            let positionSobrenome = Math.floor(Math.random() * sobrenome.length)
+
+            return nome[positionName], sobrenome[positionSobrenome]
+        }
+
+        console.log('Bom dia' + geraNome())
+
+    </script>
+    
+</body>
+</html>

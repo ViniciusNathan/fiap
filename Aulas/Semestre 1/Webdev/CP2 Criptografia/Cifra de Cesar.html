@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar</title>
+</head>
+<body>
+
+    <script>
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        function cifrarCesar(mensagem, chave) {
+            let criptoMessage = '';
+            
+            for(let i = 0; i < mensagem.length; i++) {
+                let letter = mensagem[i];
+                let isUpperCase = letter === letter.toUpperCase();
+                let letterUpper = letter.toUpperCase();
+                let position = alphabet.indexOf(letterUpper);
+
+                if (position !== -1) {
+                    let newIndex = ((position + chave) % 26 + 26) % 26;
+                    let letterCripto = alphabet[newIndex];
+                    criptoMessage += isUpperCase ? letterCripto : letterCripto.toLowerCase();
+                } else {
+                    criptoMessage += letter;
+                }
+            }
+            
+            return criptoMessage;
+        } 
+
+        // Testes
+        
+        console.log(cifrarCesar("criptografia", 3));
+        console.log(cifrarCesar("fulswrjudild", -3));
+
+    </script>
+    
+</body>
+</html>
