@@ -1,0 +1,32 @@
+
+14) Uma empresa A possui atualmente uma carteira composta de 51 clientes. Entretanto, essa empresa vem perdendo espaço, na ordem de 2 clientes mês. 
+a1) Obtenha a função que determina mensalmente o número de clientes da empresa A. 
+Ca(mes=0) = 51
+Ca(mes=1) = 51-2
+Ca(mes=2) = 51-2*2
+Ca(mes=3) = 51-2*3
+truque de 'modelagem', de descobrir a funcao
+tentar como eu obtive alguns valores de exemplo, mas de forma mais
+"generalizavel"
+
+
+Ca(mes=0) = 51-2*0
+Ca(mes=1) = 51-2*1
+Ca(mes=2) = 51-2*2
+Ca(mes=3) = 51-2*3
+Ca(mes) = 51-2*mes
+a2)Obtenha a função para a empresa B. 
+ A empresa B, concorrente, possui no momento uma carteira com 20 clientes e vem ampliando seu espaço no mercado, angariando cerca de 3 clientes mês. 
+
+Cb(0) = 20
+Cb(1) = 20+3
+Cb(2) = 20+3*2
+Cb(3) = 20+3*3
+Cb(4) = 20+3*4
+Cb(mes) = 20+3*mes
+
+b) No mês inicial (mês 0) qual empresa tem mais clientes? 
+c) No mês 2 qual empresa tem mais clientes? 
+d) No mês 10 qual empresa tem mais clientes?
+e) No mês 20 qual empresa tem mais clientes?
+f) Após quantos meses a empresa B supera a carteira de clientes da empresa A? Faça uso do gráfico e/ou de uma equação para achar resposta. 

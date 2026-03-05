@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+}
+
+#modelo-1 {
+    flex-direction: column;
+    
+    /* NOWRAP - Valor padrão */
+    flex-wrap: nowrap;
+
+    /* FLEX-START - Valor padrão */
+    justify-content: flex-start;
+}
+
+#modelo-2 {
+    /* ROW - Valor padrão */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#modelo-3 {
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+#modelo-4 {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
